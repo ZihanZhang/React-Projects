@@ -21,14 +21,13 @@ const App = () => {
     <div>
       <Router history={history}>
         <Header />
-        <div>
+        <Switch>
           <Route path="/" exact component={StreamList} />
           <Route path="/stream/new" component={StreamCreate} />
           <Route path="/stream/edit/:id" component={StreamEdit} />
           <Route path="/stream/delete/:id" component={StreamDelete} />
           <Route path="/stream/:id" component={StreamShow} />
-
-        </div>
+        </Switch>
       </Router>
     </div>
   )
